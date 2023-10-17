@@ -1,0 +1,65 @@
+#key     value
+apple: "this is a fruit"
+
+#yaml is case sensitive
+
+#block
+cities:
+- kansas city
+- monett
+
+#multiple line string
+example: >
+  Several lines of text,\n
+  with some "quotes" of various 'types',\n
+  and also a blank line
+
+
+newxample: |
+  need to find out what the difference is between these
+
+
+#specify a type
+#zero: !!int 0
+#positiveNum: !!int 45
+
+student: seq
+  -bob
+  -bill
+
+name: &name Alex
+role:
+  age: 83
+  job: construction
+
+
+
+Hobbies:
+  -fishing
+  -pickleball
+
+#want to keep formatting use this symbol
+signature:  |
+  Mike 
+  Alex
+  alex@mail.com
+
+#make everything one line 
+oneline: >
+  this will make everyhing into one line with the symbol above
+
+
+#anchoring like paramatizing objects
+
+id: *name #will be Alex
+
+
+#this will grab both the keyvalue pair and put it in the bottom foo objects
+base: &base
+  var1: value1
+
+foo:
+  <<: *base 
+
+
+
