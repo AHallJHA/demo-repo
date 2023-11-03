@@ -1,5 +1,6 @@
 #key     value
 apple: "this is a fruit"
+orange: "another fruit"
 
 #yaml is case sensitive
 
